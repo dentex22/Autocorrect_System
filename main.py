@@ -6,7 +6,9 @@ import pandas as pd
 
 
 # Implement the function process_data which
-# 1) Reads in a corpus (text file)  #2) Changes everything to lowercase  3) Returns a list of words.
+# 1) Reads in a corpus
+# #2) Changes everything to lowercase
+# 3) Returns a list of words.
 
 
 words = []
@@ -21,7 +23,7 @@ print(f"The first ten words in the text are: \n{words[0:10]}")
 print(f"There are {len(vocab)} unique words in the vocabulary.")
 
 
-# a get_count functio that returns a dictionary of word vs frequency
+# a get_count function that returns a dictionary of word vs frequency
 def get_count(words):
     word_count_dict = {}
     for word in words:
