@@ -25,22 +25,23 @@ print(f"The dictionary has {len(v)} words ")
 
 # a get_count function that returns a dictionary of word vs frequency
 def get_count(words):
-    word_count_dict = {}
+    word_count = {}
     for word in words:
-        if word in word_count_dict:
-            word_count_dict[word] += 1
+        if word in word_count:
+            word_count[word] += 1
         else:
-            word_count_dict[word] = 1
-    return word_count_dict
+            word_count[word] = 1
+    return word_count
 
 
-word_count_dict = get_count(w)
-print(f"There are {len(word_count_dict)} key values pairs")
+word_count = get_count(w)
+print(f"The dictionary has  {len(word_count)} key values pairs")
 
 
 
-# Compute the probability that each word will appear if randomly selected from the corpus of words.
+
 # implement get_probs function
+# to calculate the probability that any word will appear if randomly selected from the dictionary
 
 def get_probs(word_count_dict):
     probs = {}
@@ -140,7 +141,7 @@ def get_corrections(word, probs, vocab, n=2):
 
 
 my_word = input("Enter any word:")
-probs = get_probs(word_count_dict)
+probs = get_probs(word_count)
 tmp_corrections = get_corrections(my_word, probs, v, 2)
 for i, word_prob in enumerate(tmp_corrections):
     print(f"word {i}: {word_prob[0]}, probability {word_prob[1]:.6f}")
